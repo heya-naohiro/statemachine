@@ -1,0 +1,9 @@
+digraph  {
+        BEGIN->RPC_WAIT[ label="RecieveInitialized" ];
+        RPC_WAIT->RPC_REQUESTED[ label="RecieveRPCRequest" ];
+        RPC_REQUESTED->RPC_WAIT[ label="ResponseRPCRequest" ];
+        BEGIN;
+        RPC_REQUESTED;
+        RPC_WAIT;
+
+}
